@@ -14,4 +14,23 @@ async function reply(options = {}) {
   );
 }
 
-module.exports = { rxl, reply };
+async function Errors(error) {
+  try {
+    console.log(error);
+    return new TypeError("Some error occurred.");
+  } catch (err) {
+    console.error(err);
+    return err;
+  }
+}
+
+async function handleError() {
+  try {
+    const error = await Errors("Something went wrong.");
+    console.log("Error:", error);
+  } catch (err) {
+    console.log("Caught an error:", err);
+  }
+}
+
+module.exports = { rxl, reply, handleError };
