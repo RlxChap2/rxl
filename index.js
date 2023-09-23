@@ -1,1 +1,5 @@
-console.log('test')
+function rxl(string) {
+    return string === 'rxl'
+}
+
+module.exports = rxl;
