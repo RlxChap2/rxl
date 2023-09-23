@@ -24,13 +24,4 @@ async function Errors(error) {
   }
 }
 
-async function handleError() {
-  try {
-    const error = await Errors("Something went wrong.");
-    console.log("Error:", error);
-  } catch (err) {
-    console.log("Caught an error:", err);
-  }
-}
-
-module.exports = { rxl, reply, handleError };
+module.exports = { rxl, reply, Errors };
