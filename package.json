@@ -1,6 +1,6 @@
 {
   "name": "rxl-rest",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "rxl programming language is comming!",
   "main": "src/index.js",
   "documentation": "README.md",
