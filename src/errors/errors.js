@@ -1,5 +1,5 @@
 async function MakeNewError(Base) {
-  class CustomError extends Base {
+  class Errors extends Base {
     constructor(error) {
       super(error.message);
       this.error = error;
@@ -11,11 +11,15 @@ async function MakeNewError(Base) {
         return err;
       }
     }
+
+    get name() {
+      return `${super.name} [${this.error}]`;
+    }
   }
 
-  Error.captureStackTrace?.(CustomError);
+  Error.captureStackTrace?.(Errors);
 
-  return { Errors: CustomError };
+  return { Errors: Errors };
 }
 
 module.exports = { Errors: MakeNewError(Error) };
