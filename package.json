@@ -1,8 +1,9 @@
 {
   "name": "rxl-rest",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "rxl programming language is comming!",
   "main": "src/index.js",
+  "documentation": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
