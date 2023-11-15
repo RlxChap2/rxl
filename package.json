@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "lib/index.js"
+    "test": "."
   },
   "repository": {
     "type": "git",
