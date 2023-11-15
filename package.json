@@ -6,7 +6,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test": "lib/index.js"
   },
   "repository": {
     "type": "git",
