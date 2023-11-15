@@ -1,23 +1,36 @@
 name: Tests
+
 on:
   push:
-    pull_request:
-  concurrency:
-    # Group based on workflow name and PR if it exists, if no PR, let it run so carryforward flags work
-    group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
-    cancel-in-progress: true
-  jobs:
-    tests:
-      name: Tests
-      runs-on: ubuntu-latest
-      container:
-      image: composer:latest
+    branches:
+      - main
+
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    container:
+      image: node:latest
       volumes:
         - ${{ github.workspace }}:/app
 
-  steps:
-    - name: Checkout the repo
-      uses: actions/checkout@v3
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
 
-    - name: Running composer install
-      run: composer install
+      - name: Install dependencies
+        run: npm install
+
+      - name: Rebuild the code
+        run: |
+          # Add your code rebuild commands here
+          # For example, if you're using a build script defined in your package.json:
+          npm run build
+          # Or if you have specific build commands, replace the above line with your custom commands
+
+      - name: Running tests
+        run: |
+          # Add your test commands here
+          # For example, if you're using Jest for testing:
+          npm test
+          # Or if you're using a different testing framework, use the appropriate test commands
