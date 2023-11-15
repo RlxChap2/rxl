@@ -13,7 +13,7 @@
 
 ## install
 
-> install npm package: `npm install rxl-rest`
+`` `npm install rxl-rest` ``
 
 ---
 
