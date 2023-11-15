@@ -13,7 +13,9 @@
 
 ## install
 
-`` `npm install rxl-rest` ``
+```sh
+npm install rxl-rest
+```
 
 ---
 

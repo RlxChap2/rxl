@@ -1,39 +1,14 @@
-export class Log {
-  static success(msg: string) {
-    console.log(`%c ${msg} `, "color: green");
-  }
+import { Reply } from "./Events/Interactions";
+import { XErrors, Log } from "./Events/Console";
+
+// Example usage of the imported modules
+const reply = new Reply();
+if (reply) {
+  console.log(`Running`);
 }
 
-export class Reply {
-  static async interaction(msg: string, int: any) {
-    try {
-      if (!int) throw new TypeError("interaction is not defined");
-      if (!msg) throw new TypeError("message is not defined");
+// Errors & Debug
+XErrors.DebuggingErrors("An error occurred");
 
-      await int.reply(msg);
-      console.log(
-        "\x1b[34m" + msg,
-        "\x1b[35m" + `UserID: ${int.user.id}`,
-        `Username: ${int.user.username}` + "\x1b[37m"
-      );
-    } catch (err) {
-      throw err;
-    }
-  }
-
-  static async message(msg: string, int: any) {
-    try {
-      if (!int) throw new TypeError("interaction is not defined");
-      if (!msg) throw new TypeError("message is not defined");
-
-      await int.reply(msg);
-      console.log(
-        "\x1b[34m" + msg,
-        "\x1b[35m" + `UserID: ${int.author.id}`,
-        `Username: ${int.author.username}` + "\x1b[37m"
-      );
-    } catch (err) {
-      throw err;
-    }
-  }
-}
+// Console Colors
+Log.success("This is an information message");
