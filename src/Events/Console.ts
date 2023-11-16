@@ -1,9 +1,15 @@
-export class XErrors {
-  static TypeError(msg: any) {
+export class Console {
+  public static throwTypeError(msg: any) {
     throw new TypeError(msg);
   }
 
-  static DebuggingErrors(msg: any) {
+  public static async Color(
+    options: { message?: string; color?: string } = {}
+  ) {
+    console.log(`%c ${options.message} `, `color: ${options.color}`);
+  }
+
+  public static DebuggingErrors() {
     process.on("uncaughtException", (error) => {
       console.error(error);
     });
@@ -19,11 +25,13 @@ export class XErrors {
     process.on("rejectionHandled", (error) => {
       console.error(error);
     });
-  }
-}
 
-export class Log {
-  static success(msg: string) {
-    console.log(`%c ${msg} `, "color: green");
+    process.on("multipleResolves", (error) => {
+      console.error(error);
+    });
+
+    process.on("worker", (error) => {
+      console.error(error);
+    });
   }
 }

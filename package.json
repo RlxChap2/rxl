@@ -19,6 +19,9 @@
     "rxlrest"
   ],
   "author": "RlxChap2 <mmah02778@gmail.com>",
+  "contributors": [
+    "RlxChap2 <mmah02778@gmail.com>"
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/RlxChap2/rxl-rest/issues"

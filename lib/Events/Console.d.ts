@@ -1,7 +1,8 @@
-export declare class XErrors {
-    static TypeError(msg: any): void;
-    static DebuggingErrors(msg: any): void;
-}
-export declare class Log {
-    static success(msg: string): void;
+export declare class Console {
+    static throwTypeError(msg: any): void;
+    static Color(options?: {
+        message?: string;
+        color?: string;
+    }): Promise<void>;
+    static DebuggingErrors(): void;
 }
