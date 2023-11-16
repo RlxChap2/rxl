@@ -19,36 +19,18 @@ npm install rxl-rest
 
 ---
 
-## String Code
-
-**This is a simple code for using the string code :**
-
-```js
-const { String } = require("rxl-rest");
-
-console.log(String("rxl"));
-```
-
-- **if the string = rxl**
-
-```console
-$ true
-```
-
-- **if the string dosen't same the rxl**
-
-```console
-$ false
-```
-
 ## Discord Package Section
 
 > **You can user reply and interaction messages with `rxl-rest` package**
 
 ```js
-const { reply } = require("rxl-rest");
+const { Reply } = require("rxl-rest");
 
-reply({ message: `Test Message`, interaction: interaction });
+// Example Useage for Messages
+Reply.message({ message: `Test Message`, interaction: message });
+
+// Example Useage for Interactions
+Reply.interaction({ message: `Test Message`, interaction: interaction });
 ```
 
 **Console:**
@@ -57,23 +39,19 @@ reply({ message: `Test Message`, interaction: interaction });
 $ Test Message, UserID: userId, Username: username
 ```
 
-## Errors Section
+## Console Section
 
-- **you can Return and get The Errors**
+- **you can Get more features With rxl!**
 
 ```js
-const { Errors } = require("rxl-rest");
+const { Console } = require("rxl-rest");
 
-async function testErrors() {
-  try {
-    // Call Errors function with different inputs
-    const ErrorsInstance = await Errors;
-    const error1 = new ErrorsInstance.Errors("Error 1");
-    console.log("Returned error 1:", error1);
-  } catch (err) {
-    console.log("Caught an error:", err);
-  }
-}
+// Exmple Useage of how to Return and get The Errors
+Console.DebuggingErrors();
 
-testErrors();
+// Exmple Useage of how to Change The Console Msssage Color
+Console.Color({ message: `Hello World!`, color: "green" }); // Green => green, Red => red
+
+// Exmple Useage of how to make Type Errors
+Console.throwTypeError("An error occurred");
 ```
