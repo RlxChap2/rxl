@@ -21,7 +21,7 @@ npm install rxl-rest
 
 ## Discord Package Section
 
-> **You can user reply and interaction messages with `rxl-rest` package**
+> **You can use reply and interaction messages with `rxl-rest` package**
 
 ```js
 const { Reply } = require("rxl-rest");

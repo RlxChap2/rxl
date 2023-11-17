@@ -26,10 +26,6 @@ export class Console {
       console.error(error);
     });
 
-    process.on("multipleResolves", (error) => {
-      console.error(error);
-    });
-
     process.on("worker", (error) => {
       console.error(error);
     });
