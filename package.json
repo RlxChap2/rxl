@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@rlx-npm"
+    "registry": "https://npm.pkg.github.com/@RlxChap2"
   },
   "scripts": {
     "build": "tsc",
