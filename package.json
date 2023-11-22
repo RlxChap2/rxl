@@ -4,9 +4,6 @@
   "description": "A powerful library for interacting with the Errors",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@RlxChap2"
-  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
