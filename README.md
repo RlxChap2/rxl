@@ -44,13 +44,14 @@ $ Test Message, UserID: userId, Username: username
 - **you can Get more features With rxl!**
 
 ```js
-const { Console } = require("rxl-rest");
+const { Console, RColors } = require("rxl-rest");
 
 // Exmple Useage of how to Return and get The Errors
 Console.DebuggingErrors();
 
 // Exmple Useage of how to Change The Console Msssage Color
-Console.Color({ message: `Hello World!`, color: "green" }); // Green => green, Red => red
+Console.Color({ message: `Hello World!`, color: RColors.Green });
+// RColors: ["Black", "Blue", "Cyan", "Green", "Magenta", "Red", "White", "Yellow"];
 
 // Exmple Useage of how to make Type Errors
 Console.throwTypeError("An error occurred");
